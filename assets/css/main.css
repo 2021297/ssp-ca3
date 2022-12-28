@@ -849,7 +849,7 @@ section {
 }
 
 .call-to-action h3 {
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -968,13 +968,15 @@ section {
 --------------------------------------------------------------*/
 .services {
   padding: 60px 0;
+  color: #000;
 }
 
 .services .service-item {
   padding: 40px;
-  background: #fff;
+  background: rgba(0, 131, 116, 0.4);
   height: 100%;
   border-radius: 10px;
+  color: #000;
 }
 
 .services .service-item .icon {
@@ -997,7 +999,7 @@ section {
   content: "";
   height: 100%;
   width: 100%;
-  background: #eeeeee;
+  background: rgba(0, 131, 116, 0.4);
   border-radius: 50px;
   z-index: 1;
   top: 10px;
@@ -1015,18 +1017,21 @@ section {
   display: inline-block;
   border-bottom: 4px solid #eeeeee;
   transition: 0.3s;
+  color: #000;
 }
 
 .services .service-item p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  color: #000;
 }
 
 .services .service-item .readmore {
   margin-top: 15px;
   display: inline-block;
   color: var(--color-primary);
+  color: #000;
 }
 
 .services .service-item:hover .icon:before {
@@ -1035,6 +1040,10 @@ section {
 
 .services .service-item:hover h3 {
   border-color: var(--color-primary);
+  color: #000;
+}
+.services div h2 {
+  color: #000;
 }
 
 /*--------------------------------------------------------------
@@ -1603,6 +1612,10 @@ section {
   z-index: 10;
   border: 3px solid var(--color-primary);
 }
+.pricing div h2 {
+  color: #000;
+}
+
 
 @media (min-width: 992px) {
   .pricing .featured {

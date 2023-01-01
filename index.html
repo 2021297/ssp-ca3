@@ -451,7 +451,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form enctype="apllication/json" action="/forms/json" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -461,7 +461,13 @@
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <select class="form-select" name="subject">
+                  <option value="0">nails</option>
+                  <option value="1">waxing</option>
+                  <option value="2">massage</option>
+                  <option value="3">facials</option>
+                </select>
+                
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
@@ -493,8 +499,6 @@
           </a>
           <p>We don't want to be somewhere which walks away so easily from you.
             Our care and team will promise to you.
-            This is our only way, that we become 
-            Beautiful people.
           </p>
           <div class="social-links d-flex mt-4">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>

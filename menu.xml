@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plans>
+	<plan>
+		<id>1</id>
+        <name>freeplan</name>
+		<price>free</price>
+		
+	</plan>
+	<plan>
+		<id>2</id>
+                <name>sliverplan</name>
+
+		<price>49</price>
+
+	</plan>
+	<plan>
+		<id>3</id>
+                <name>goldplan</name>
+
+		<price>99</price>
+
+	</plan>
+</plans>  

@@ -28,7 +28,7 @@ function JSONtoXML(filename, obj, cb){
     fs.writeFile(filepath, xml, cb);
 };
 
-router.get('/get/html', function(req, res) {
+router.get('/', function(req, res) {
 
     res.writeHead(200, {'Content-Type' : 'text/html'});
 
@@ -48,7 +48,7 @@ router.post('/post/json', function(req, res){
         console.log(obj);
         XMLtoJSON('menu.xml', function(err, result) {
             if (err) throw (err);
-            result.menu.plan[obj.subject].item.push({'name': obj.name, 'price': obj.price});
+            result.menu.plan[obj.sec_n].item.push({'name': obj.listing, 'price': obj.price});
             console.log(JSON.stringify(result, null, " "));
             JSONtoXML('menu.xml', result, function(err){
                 if (err) console.log(err);
@@ -78,10 +78,9 @@ router.post('/post/delete', function (req,res) {
     deleteJSON(req.body);
 
     res.redirect('back');
-})
+});
 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
     const addr = server.address();
     console.log("Server listening at", addr.address + ":" + addr.port)
 });
-

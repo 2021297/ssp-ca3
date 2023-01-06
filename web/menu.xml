@@ -1,23 +1,60 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<plans>
-	<plan>
-		<id>1</id>
-        <name>freeplan</name>
-		<price>free</price>
-		
-	</plan>
-	<plan>
-		<id>2</id>
-                <name>sliverplan</name>
-
-		<price>49</price>
-
-	</plan>
-	<plan>
-		<id>3</id>
-                <name>goldplan</name>
-
-		<price>99</price>
-
-	</plan>
-</plans>  
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<menu>
+  <category name="Waxing">
+    <item>
+      <listing>Brazilian waxing</listing>
+      <price>25</price>
+    </item>
+    <item>
+      <listing>Hollywood waxing</listing>
+      <price>27</price>
+    </item>
+    <item promotion="true">
+      <listing>All body waxing</listing>
+      <price>50</price>
+    </item>
+  </category>
+  <category name="Nails">
+    <item>
+      <listing>Gel nails</listing>
+      <price>20</price>
+    </item>
+    <item>
+      <listing>Shellac nails</listing>
+      <price>15</price>
+    </item>
+    <item promotion="true">
+      <listing>Gel nails and Pedicure</listing>
+      <price>25</price>
+    </item>
+  </category>
+  <category name="Facials">
+    <item>
+      <listing>Cleansing</listing>
+      <price>25</price>
+    </item>
+    <item>
+      <listing>BB glow</listing>
+      <price>50</price>
+    </item>
+    <item promotion="true">
+      <listing>Cleansing and BB glow set</listing>
+      <price>100</price>
+    </item>
+  </category>
+  <category name="Massage">
+    <item>
+      <listing>Deep tissue</listing>
+      <price>60</price>
+    </item>
+    <item>
+      <listing>Tai massage</listing>
+      <price>65</price>
+    </item>
+    <item promotion="true">
+      <listing>All body massage</listing>
+      <price>70</price>
+    </item>
+  </category>
+ 
+</menu>

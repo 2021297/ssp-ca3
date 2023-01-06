@@ -73,6 +73,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
@@ -339,8 +340,32 @@
           <p style="color:#000;">
             A & Y beauty is worthwhile, it is enjoyable or useful, and worth the time, money, or effort that is spent on it.</p>
         </div>
-
-        <div class="row g-4 py-lg-5" data-aos="zoom-out" data-aos-delay="100">
+        <div class="row">
+          <div id="menu" class="col-lg-4 mb-5 order-1">
+              <form enctype="application/json" action="/post/json" method="post">
+                  <div class="form-group">
+                      <select class="form-select" name="sec_n">
+                          <option value="0">Waxing</option>
+                          <option value="1">Nails</option>
+                          <option value="2">Facial</option>
+                          <option value="3">Massage</option>
+                          
+                      </select>
+                      <input class="form-control mt-3" type="text" name="listing" placeholder="Listing">
+                      <input class="form-control mt-3" type="text" name="price" placeholder="Price">
+                      <div class="d-grid gap-2 mt-3">
+                          <button type="submit" class="btn btn-primary btn-block">Booking</button>
+                      </div>
+                  </div>
+              </form>
+              <div class="d-grid gap-2">
+                  <button id="delete" class="btn btn-danger btn-block mt-3">Clear</button>
+              </div>
+          </div>
+          <div id="results" class="col-lg-8 mb-5 order-2"></div>
+      </div>
+  </div>
+       <!-- <div class="row g-4 py-lg-5" data-aos="zoom-out" data-aos-delay="100">
 
           <div class="col-lg-4">
             <div class="pricing-item">
@@ -358,8 +383,8 @@
               </ul>
               
             </div>
-          </div><!-- End Pricing Item -->
-
+          </div> --><!-- End Pricing Item -->
+<!--
           <div class="col-lg-4">
             <div class="pricing-item featured">
               <h3>Silver Plan</h3>
@@ -377,8 +402,8 @@
               </ul>
               
             </div>
-          </div><!-- End Pricing Item -->
-
+          </div>--><!-- End Pricing Item -->
+<!--
           <div class="col-lg-4">
             <div class="pricing-item">
               <h3>Gold Plan</h3>
@@ -395,7 +420,7 @@
               </ul>
             
             </div>
-          </div><!-- End Pricing Item -->
+          </div>--><!-- End Pricing Item -->
 
         </div>
 

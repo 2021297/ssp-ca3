@@ -1,0 +1,53 @@
+{
+  
+  "name": "web",
+  
+  "version": "1.0.0",
+  
+  "description": "ca",
+  
+  "main": "index.js",
+  
+  "scripts": {
+  
+    
+  "test": "echo \"Error: no test specified\" && exit 1"
+  
+  },
+  
+  "repository": {
+  
+    
+  "type": "git",
+  
+    
+  "url": "git+https://github.com/2021297/ssp-ca3.git"
+  
+  },
+  
+  "author": "Yuna",
+  
+  "license": "ISC",
+  
+  "bugs": {
+  
+    
+  "url": "https://github.com/2021297/ssp-ca3/issues"
+  
+  },
+  
+  "homepage": "https://github.com/2021297/ssp-ca3#readme",
+  
+  "dependencies": {
+  
+    
+  "expres": "^0.0.5",
+  
+    
+  "express": "^4.18.2",
+  
+    
+  "xslt-processor": "^0.11.7"
+  
+  }
+}

@@ -1,31 +1,39 @@
-<xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
 	<xsl:template match="/">
-		<html>
-			<body>
-				<h2>plan Information</h2>
-				<table border="1">
-					<tr bgcolor="#9acd32">
-						<th>id</th>
-						<th>name</th>
-						<th>price</th>
+		<table id="menuTable" border="1" class="indent">
+			<thead>
+				<tr>
+					<th>Select</th>
+					<th>Item</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<xsl:for-each select="//category">
+					<tr>
+						<td colspan="3">
+							<xsl:value-of select="@name" />
+						</td>
 					</tr>
-					<xsl:for-each select="plans/plan">
-						<tr>
-							<td>
-								<xsl:value-of select="id"/>
+					<xsl:for-each select="item">
+						<tr id="{position()}">
+							<xsl:attribute name="decaf">
+								<xsl:value-of select="boolean(@decaf)" />
+							</xsl:attribute>
+							<td align="center">
+								<input name="item0" type="checkbox" />
 							</td>
 							<td>
-								<xsl:value-of select="name"/>
+								<xsl:value-of select="listing" />
 							</td>
-							<td>
-								<xsl:value-of select="price"/>
+							<td align="right">
+								<xsl:value-of select="price" />
 							</td>
-							
 						</tr>
 					</xsl:for-each>
-				</table>
-			</body>
-		</html>
+				</xsl:for-each>
+			</tbody>
+		</table>
 	</xsl:template>
-</xsl:stylesheet>
+</xsl:transform>

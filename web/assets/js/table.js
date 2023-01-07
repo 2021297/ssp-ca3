@@ -3,9 +3,9 @@ function draw_table(){
     $.getJSONuncached = function(url){
         return $.ajax(
         {
-            url: url,
+            url: index.html,
             type: 'GET',
-            cache: false,
+            //cache: false,
             success: function(html){
                 $("#results").append(html);
                 select_row();

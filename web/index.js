@@ -28,7 +28,8 @@ function JSONtoXML(filename, obj, cb){
     fs.writeFile(filepath, xml, cb);
 };
 
-router.get('/', function(req, res) {
+router.get('', function(req, res) {
+    // res.sendFile(path.join(__dirname + /../web/index.html));
 
     res.writeHead(200, {'Content-Type' : 'text/html'});
 

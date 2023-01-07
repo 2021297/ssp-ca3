@@ -1,13 +1,13 @@
-const   http = require('http'), //HTTP server
+const http = require('http'), //HTTP server
         path = require('path'),
         express = require('express'), //Handling HTTP requests & routing
         fs = require('fs'), //File system functionalities
         xmlParse = require('xslt-processor').xmlParse, //XML handling
         xsltProcess = require('xslt-processor').xsltProcess, //XSLT handling
-        router = express(), //Init our router
-        xml2js = require('xml2js'),
+       router = express(), //Init our router
+       xml2js = require('xml2js'),
         server = http.createServer(router); //Init our server
-        
+ 
         router.use(express.static(path.resolve(__dirname,'views')));
         router.use(express.urlencoded({extended: true}));
         router.use(express.json());
@@ -28,11 +28,12 @@ function JSONtoXML(filename, obj, cb){
     fs.writeFile(filepath, xml, cb);
 };
 
-router.get('', function(req, res) {
-    // res.sendFile(path.join(__dirname + /../web/index.html));
-
-    res.writeHead(200, {'Content-Type' : 'text/html'});
-
+// router.get('/get/html', function(req, res) {
+//     console.log("A new request received at " + Date.now());
+//     res.writeHead(200, {'Content-Type' : 'text/html'});
+http.createServer(function (req, res) {
+    var url = URL.parse(req.url);
+  
     let xml = fs.readFileSync('menu.xml', 'utf8'),
         xsl = fs.readFileSync('menu.xsl', 'utf8');
 
@@ -49,7 +50,7 @@ router.post('/post/json', function(req, res){
         console.log(obj);
         XMLtoJSON('menu.xml', function(err, result) {
             if (err) throw (err);
-            result.menu.plan[obj.sec_n].item.push({'name': obj.listing, 'price': obj.price});
+            result.menu.category[obj.sec_n].item.push({'listing': obj.listing, 'price': obj.price});
             console.log(JSON.stringify(result, null, " "));
             JSONtoXML('menu.xml', result, function(err){
                 if (err) console.log(err);
@@ -79,7 +80,7 @@ router.post('/post/delete', function (req,res) {
     deleteJSON(req.body);
 
     res.redirect('back');
-});
+})
 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
     const addr = server.address();

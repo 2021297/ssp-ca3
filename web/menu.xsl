@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
-	<xsl:template match="/get/html">
+	<xsl:template match="/">
 		<table id="menuTable" border="1" class="indent">
 			<thead>
 				<tr>
@@ -18,8 +18,8 @@
 					</tr>
 					<xsl:for-each select="item">
 						<tr id="{position()}">
-							<xsl:attribute name="decaf">
-								<xsl:value-of select="boolean(@decaf)" />
+							<xsl:attribute name="promotion">
+								<xsl:value-of select="boolean(@promotion)" />
 							</xsl:attribute>
 							<td align="center">
 								<input name="item0" type="checkbox" />
